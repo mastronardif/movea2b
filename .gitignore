@@ -4,7 +4,6 @@
 *.user
 *.pdb
 *.swp
-*.dll
 *.exe
 *.exe.config
 *.manifest
@@ -18,7 +17,6 @@
 _ReSharper*
 
 obj/
-bin/
 /Debug/
 CefSharp/app.aps
 debug.log
