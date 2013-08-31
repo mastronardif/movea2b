@@ -64,6 +64,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\default.min.css" />
+    <Content Include="Content\images\red_little_car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\signup.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

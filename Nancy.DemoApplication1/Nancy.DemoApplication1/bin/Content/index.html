@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Simple Sign Up Form by PremiumFreeibes.eu</title>
+<title>index</title>
 
 	<!---------- CSS ------------>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
@@ -19,16 +19,22 @@
         
         	<div class="clearfix" id="header">
         	
-        		<img id="signup-icon" src="./images/signup.png" alt="" />
+        		<img id="signup-icon" src="./images/red_little_car.png" alt="wtf lewis" />
         
-                <h1>Sign up to yourCompany.com <br/> FREE Today!</h1>
+                <h1>
+                    Move stuff from A to B.
+                    </h1>
+                <i> You can be shipper or a mover!</i>
 
             
             </div>
-			<p>Please complete the fields below, ensuring you use a valid email address as you will be sent a validation code which you will need the first time you login to the site.</p>
+			<p>Please complete the fields below,  use a valid email address 
+               as this will be used for all correspondence for this move request.
+			</p>
 
+           
             
-            <form id="send" action="">
+            <form id="contract001" action="../contract001/contract001" method="POST">
             	
                 <p>
 
@@ -37,35 +43,22 @@
                 </p>
                 
                 <p>
-                <label for="company">Company Name</label>
-                <input id="company" type="text" name="company" value="" />
+                <label for="company">From -- To zip codes *</label>
+                <input id="company" type="text" name="company" value="" />  
+                <input id="Text2" type="text" name="company" value="" />
                 </p>
                 
                 <p>
-
-                <label for="email">Email *</label>
+                <label for="email">Contact Info: Email *</label>
                 <input id="email" type="text" name="email" value="" />
-                </p>
-                
-                <p>
-                <label for="website">Website</label>
-                <input id="website" type="text" name="website" value="http://" />
-                </p>
-                
-                <p>
+                <br/>
+                <label for="email">Verify Email *</label>
+                <input id="Text1" type="text" name="email" value="" />
 
-                <label for="phone">Phone</label>
-                <input id="phone" type="text" name="phone" value="" />
-                </p>
-                
+                </p>                
+                                                
                 <p>
-                <label for="country">Country</label>
-                <input id="Country" type="text" name="country" value="" />
-                </p>
-                
-                
-                <p>
-                <label for="profile">Tell us about yourself *</label>
+                <label for="profile"> What it is you want moved(details, but not tuo much) *</label>
                 <textarea name="profile" id="profile" cols="30" rows="10"></textarea>
 
                 </p>
@@ -79,7 +72,7 @@
             
 		<div id="required">
 		<p>* Required Fields<br/>
-		NOTE: You must activate your account after sign up</p>
+		NOTE: An email will be sent to the given email to activate your account</p>
 		</div>
 
 
