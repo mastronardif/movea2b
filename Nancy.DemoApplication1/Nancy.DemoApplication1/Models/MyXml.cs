@@ -9,10 +9,28 @@ using System.Xml.Xsl;
 
 
 namespace myxslxml
-
 {
     class MyXml
     {
+        static public bool isTagValue(string xml, string xpath)
+        {
+            //bool retval = false;
+            //string xpath = "myDataz/listS/sog";
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml(xml);
+
+            var nodes = xmlDoc.SelectNodes(xpath);
+
+            foreach (XmlNode childrenNode in nodes)
+            {
+                return true;
+                //retval += (childrenNode.SelectSingleNode("/").Value);
+                //retval += (childrenNode.SelectSingleNode("//field1").Value);
+            }
+
+            return false;       
+        }
+
         static public void my_XslXmlOut00(string fnXml, string fnXsl, string fnOut)
         {
             XslCompiledTransform myXslTransform;
@@ -45,7 +63,6 @@ namespace myxslxml
                 }
             }
         }
-
 
 
         static public void my_XslXmlOut(string fnXml, string fnXsl, ref string results)

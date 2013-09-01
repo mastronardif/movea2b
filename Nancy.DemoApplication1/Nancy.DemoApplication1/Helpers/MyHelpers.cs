@@ -21,6 +21,5 @@ namespace myhelpers
                 results = myFile.ReadToEnd();
             }
         }
-
     }
 }
