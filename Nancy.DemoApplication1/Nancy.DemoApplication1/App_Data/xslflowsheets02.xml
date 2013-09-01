@@ -1,0 +1,285 @@
+<?xml-stylesheet type="text/xsl" href="flows02.xsl"?>
+<data>
+<field-list>
+  <field name="DisplayDateTime" type="DateTime" value="2013-08-14T19:34:00Z" />
+  <field name="FlowsheetDisplay" type="ListBox" value="Ante/Intrapartum*Outpatient/Triage*" />
+  <field name="Note" type="Text" value="4,000 TEST s a big note greater thenw much I try, I cannot see my entire note on the grid using the scroll bar.  Also, the word 1234567zz should be the last word- (I carefully counted the number of characters that I pasted in the note).  I am unable to type more characters in the text box, but I can select phrases from above and it se to save it.  believed it was very important to be able to see the “entire” note text in the overview grid using the scrolnter more than 4000 characters by clicking phrases.  Cannot manually enter more than 4000 characters.  Cannot see all 4000 characters in the grid even when the 40000 has a space every 10 character of characters that I pasted in the note).  I am unable to type more characters in the text box, but I can select phrases from above and it seems to save it was very important to be able to see the “entire” note text in the overview grid using the scrolunted the number of characters that I haracters by clicking phrases.  Cannot manually enter more than 4000 characters.  Cannot see all 4000 characters in the grid even when the 40000 has a space every 10 characters.&#xD;&#xA;&#xD;&#xA;No matter how much I try, I cannot see my entire note on the grid using the scroll bar.  Also, the word 1234567zz should be the last word- (I carefully counted the number of characters that I pasted in the note).  I am unable to type more characters in the teuch I try, I cannot see my entire note on the grid using the scroll bar.  Also, the wordEND 1234567zz" />
+  <field name="ConsultsNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="NursesNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="ProviderNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="NotesTypes" type="TextList" value="Nurse Note" />
+  <field name="Verify" type="Text" value="" />
+  <field name="VerifyDateTime" type="Text" value="" />
+  <field name="ConsultsNotePrenatal" type="ListBox" value="" />
+  <field name="ConsultsNoteAntepartum" type="ListBox" value="" />
+  <field name="ConsultsNoteIntrapartum" type="ListBox" value="" />
+  <field name="ConsultsNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="ConsultsNoteNewborn" type="ListBox" value="" />
+  <field name="ProviderNotePrenatal" type="ListBox" value="" />
+  <field name="ProviderNoteAntepartum" type="ListBox" value="" />
+  <field name="ProviderNoteIntrapartum" type="ListBox" value="" />
+  <field name="ProviderNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="ProviderNoteNewborn" type="ListBox" value="" />
+  <field name="NursesNoteIntrapartum" type="ListBox" value="" />
+  <field name="NursesNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="NursesNoteAntepartum" type="ListBox" value="" />
+  <field name="NursesNoteNewborn" type="ListBox" value="" />
+  <field name="NursesNotePrenatal" type="ListBox" value="" />
+  <field name="ValidFlag" type="CheckBox" value="X" />
+  <field name="ModifiedDate" type="DateTime" value="2013-08-14T19:34:00Z" />
+  <field name="ModifiedBy" type="Text" value="" />
+  <field name="CreatedDate" type="DateTime" value="2013-08-06T16:42:00Z" />
+  <field name="CreatedBy" type="Text" value="ADMIN" />
+  <field name="RdVersion" type="Text" value="2" />
+  <field name="EnteredBy" type="Text" value="" />
+  <field name="SignatureDisplay" type="Text" value="" />
+  <field name="BirthOrder" type="Text" value="" />
+</field-list>
+
+
+  <field-list>
+    <field name="DisplayDateTime" type="DateTime" value="2013-08-14T19:34:00Z" />
+    <field name="FlowsheetDisplay" type="ListBox" value="Ante/Intrapartum*Outpatient/Triage*" />
+    <field name="Note" type="Text"
+           value="
+Florida has scored 647 points in coach Will Muschamp&#39;s first two seasons, scoring 331 points in 2011 and 344 points in 2012 for an overall average of 25.92 points per game. Florida ranked eighth in the SEC in scoring in 2011 and 10th a year ago, though the latter didn&#39;t stop the Gators from reaching a BCS bowl, the program&#39;s seventh.
+
+But no Florida teams since 1988-89 had ever scored fewer points during a two-year span &#8211; and in Gainesville, 1988-89 are known more popularly as &quot;the two years prior to Steve Spurrier&#39;s arrival.&quot; The Gators have lost four games during the past two years when allowing 21 or fewer points: Georgia in 2012 and Florida State, South Carolina and Auburn in 2011. In comparison, UF lost six such games from 1990, Spurrier&#39;s first season, through 2010, Urban Meyer&#39;s last.
+
+So there&#39;s a disconnect in Gainesville, one arm stronger than the other, an imbalance that will, unless rectified, threaten Florida&#39;s chances at knocking off Alabama, Georgia and others to reclaim its perch atop the SEC. The defense is in place: UF&#39;s group is ferocious, a personification of a coach, Muschamp, whose approach can be best defined with an onomatopoeia &#8211; boom. But where&#39;s the offense? Gainesville wants to know, because Florida isn&#39;t happy with second place.
+
+NO. 125 TO NO. 1: College football countdown
+           "/>
+
+    <field name="ConsultsNoteOutpatientTriage" type="ListBox" value="" />
+    <field name="NursesNoteOutpatientTriage" type="ListBox" value="" />
+    <field name="ProviderNoteOutpatientTriage" type="ListBox" value="" />
+    <field name="NotesTypes" type="TextList" value="Nurse Note" />
+    <field name="Verify" type="Text" value="" />
+    <field name="VerifyDateTime" type="Text" value="" />
+    <field name="ConsultsNotePrenatal" type="ListBox" value="" />
+    <field name="ConsultsNoteAntepartum" type="ListBox" value="" />
+    <field name="ConsultsNoteIntrapartum" type="ListBox" value="" />
+    <field name="ConsultsNoteRecoveryPostpartum" type="ListBox" value="" />
+    <field name="ConsultsNoteNewborn" type="ListBox" value="" />
+    <field name="ProviderNotePrenatal" type="ListBox" value="" />
+    <field name="ProviderNoteAntepartum" type="ListBox" value="" />
+    <field name="ProviderNoteIntrapartum" type="ListBox" value="" />
+    <field name="ProviderNoteRecoveryPostpartum" type="ListBox" value="" />
+    <field name="ProviderNoteNewborn" type="ListBox" value="" />
+    <field name="NursesNoteIntrapartum" type="ListBox" value="" />
+    <field name="NursesNoteRecoveryPostpartum" type="ListBox" value="" />
+    <field name="NursesNoteAntepartum" type="ListBox" value="" />
+    <field name="NursesNoteNewborn" type="ListBox" value="" />
+    <field name="NursesNotePrenatal" type="ListBox" value="" />
+    <field name="ValidFlag" type="CheckBox" value="X" />
+    <field name="ModifiedDate" type="DateTime" value="2013-08-14T19:34:00Z" />
+    <field name="ModifiedBy" type="Text" value="" />
+    <field name="CreatedDate" type="DateTime" value="2013-08-06T16:42:00Z" />
+    <field name="CreatedBy" type="Text" value="ADMIN" />
+    <field name="RdVersion" type="Text" value="2" />
+    <field name="EnteredBy" type="Text" value="" />
+    <field name="SignatureDisplay" type="Text" value="" />
+    <field name="BirthOrder" type="Text" value="" />
+  </field-list>
+
+
+
+  <field-list>
+    <field name="DisplayDateTime" type="DateTime" value="2013-08-14T19:34:00Z" />
+    <field name="FlowsheetDisplay" type="ListBox" value="Ante/Intrapartum*Outpatient/Triage*" />
+    <field name="Note" type="Text"
+           value="
+           4,000 TEST s a big note greater thenw much I try, I cannot see my entire note on t
+  ZZZZZZZZZZZZZZZZ
+           r.  Also, the wordEND 1234567zz
+           "/>
+
+    <field name="ConsultsNoteOutpatientTriage" type="ListBox" value="" />
+    <field name="NursesNoteOutpatientTriage" type="ListBox" value="" />
+    <field name="ProviderNoteOutpatientTriage" type="ListBox" value="" />
+    <field name="NotesTypes" type="TextList" value="Nurse Note" />
+    <field name="Verify" type="Text" value="" />
+    <field name="VerifyDateTime" type="Text" value="" />
+    <field name="ConsultsNotePrenatal" type="ListBox" value="" />
+    <field name="ConsultsNoteAntepartum" type="ListBox" value="" />
+    <field name="ConsultsNoteIntrapartum" type="ListBox" value="" />
+    <field name="ConsultsNoteRecoveryPostpartum" type="ListBox" value="" />
+    <field name="ConsultsNoteNewborn" type="ListBox" value="" />
+    <field name="ProviderNotePrenatal" type="ListBox" value="" />
+    <field name="ProviderNoteAntepartum" type="ListBox" value="" />
+    <field name="ProviderNoteIntrapartum" type="ListBox" value="" />
+    <field name="ProviderNoteRecoveryPostpartum" type="ListBox" value="" />
+    <field name="ProviderNoteNewborn" type="ListBox" value="" />
+    <field name="NursesNoteIntrapartum" type="ListBox" value="" />
+    <field name="NursesNoteRecoveryPostpartum" type="ListBox" value="" />
+    <field name="NursesNoteAntepartum" type="ListBox" value="" />
+    <field name="NursesNoteNewborn" type="ListBox" value="" />
+    <field name="NursesNotePrenatal" type="ListBox" value="" />
+    <field name="ValidFlag" type="CheckBox" value="X" />
+    <field name="ModifiedDate" type="DateTime" value="2013-08-14T19:34:00Z" />
+    <field name="ModifiedBy" type="Text" value="" />
+    <field name="CreatedDate" type="DateTime" value="2013-08-06T16:42:00Z" />
+    <field name="CreatedBy" type="Text" value="ADMIN" />
+    <field name="RdVersion" type="Text" value="2" />
+    <field name="EnteredBy" type="Text" value="" />
+    <field name="SignatureDisplay" type="Text" value="" />
+    <field name="BirthOrder" type="Text" value="" />
+  </field-list>
+
+
+
+  <field-list>
+    <field name="DisplayDateTime" type="DateTime" value="2013-08-14T19:34:00Z" />
+    <field name="FlowsheetDisplay" type="ListBox" value="Ante/Intrapartum*Outpatient/Triage*" />
+    <field name="Note" type="Text" 
+           value="4,000 TEST s a big note greater thenw much I try, I cannot see my entire note on t
+  ZZZZZZZZZZZZZZZZ
+           r.  Also, the wordEND 1234567zz" />
+    
+    <field name="ConsultsNoteOutpatientTriage" type="ListBox" value="" />
+    <field name="NursesNoteOutpatientTriage" type="ListBox" value="" />
+    <field name="ProviderNoteOutpatientTriage" type="ListBox" value="" />
+    <field name="NotesTypes" type="TextList" value="Nurse Note" />
+    <field name="Verify" type="Text" value="" />
+    <field name="VerifyDateTime" type="Text" value="" />
+    <field name="ConsultsNotePrenatal" type="ListBox" value="" />
+    <field name="ConsultsNoteAntepartum" type="ListBox" value="" />
+    <field name="ConsultsNoteIntrapartum" type="ListBox" value="" />
+    <field name="ConsultsNoteRecoveryPostpartum" type="ListBox" value="" />
+    <field name="ConsultsNoteNewborn" type="ListBox" value="" />
+    <field name="ProviderNotePrenatal" type="ListBox" value="" />
+    <field name="ProviderNoteAntepartum" type="ListBox" value="" />
+    <field name="ProviderNoteIntrapartum" type="ListBox" value="" />
+    <field name="ProviderNoteRecoveryPostpartum" type="ListBox" value="" />
+    <field name="ProviderNoteNewborn" type="ListBox" value="" />
+    <field name="NursesNoteIntrapartum" type="ListBox" value="" />
+    <field name="NursesNoteRecoveryPostpartum" type="ListBox" value="" />
+    <field name="NursesNoteAntepartum" type="ListBox" value="" />
+    <field name="NursesNoteNewborn" type="ListBox" value="" />
+    <field name="NursesNotePrenatal" type="ListBox" value="" />
+    <field name="ValidFlag" type="CheckBox" value="X" />
+    <field name="ModifiedDate" type="DateTime" value="2013-08-14T19:34:00Z" />
+    <field name="ModifiedBy" type="Text" value="" />
+    <field name="CreatedDate" type="DateTime" value="2013-08-06T16:42:00Z" />
+    <field name="CreatedBy" type="Text" value="ADMIN" />
+    <field name="RdVersion" type="Text" value="2" />
+    <field name="EnteredBy" type="Text" value="" />
+    <field name="SignatureDisplay" type="Text" value="" />
+    <field name="BirthOrder" type="Text" value="" />
+  </field-list>
+
+
+
+  <field-list>
+  <field name="DisplayDateTime" type="DateTime" value="2013-08-14T19:34:00Z" />
+  <field name="FlowsheetDisplay" type="ListBox" value="Ante/Intrapartum*Outpatient/Triage*" />
+  <field name="Note" type="Text" value="4,000 TEST s a big note greater thenw much I try, I cannot see my entire note on t
+  Note II “entire” note text in the overview grid using the scrolnter more than 4000 characters by clicking phrases.  Cannot manually enter more than 4000 characters.  Cannot see all 4000 characters in the grid even when the 40000 has a space every 10 character of characters that I pasted in the note).  I am unable to type more characters in the text box, but I can select phrases from above and it seems to save it was very important to be able to see the “entire” note text in the overview grid using the scrolunted the number of characters that I haracters by clicking phrases.  Cannot manually enter more than 4000 characters.  Cannot see all 4000 characters in the grid even when the 40000 has a space every 10 characters.&#xD;&#xA;&#xD;&#xA;No matter how much I try, I cannot see my entire note on the grid using the scroll bar.  Also, the word 1234567zz should be the last word- (I carefully counted the number of characters that I pasted in the note).  I am unable to type more characters in the teuch I try, I cannot see my entire note on the grid using the scroll bar.  Also, the wordEND 1234567zz" />
+  <field name="ConsultsNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="NursesNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="ProviderNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="NotesTypes" type="TextList" value="Nurse Note" />
+  <field name="Verify" type="Text" value="" />
+  <field name="VerifyDateTime" type="Text" value="" />
+  <field name="ConsultsNotePrenatal" type="ListBox" value="" />
+  <field name="ConsultsNoteAntepartum" type="ListBox" value="" />
+  <field name="ConsultsNoteIntrapartum" type="ListBox" value="" />
+  <field name="ConsultsNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="ConsultsNoteNewborn" type="ListBox" value="" />
+  <field name="ProviderNotePrenatal" type="ListBox" value="" />
+  <field name="ProviderNoteAntepartum" type="ListBox" value="" />
+  <field name="ProviderNoteIntrapartum" type="ListBox" value="" />
+  <field name="ProviderNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="ProviderNoteNewborn" type="ListBox" value="" />
+  <field name="NursesNoteIntrapartum" type="ListBox" value="" />
+  <field name="NursesNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="NursesNoteAntepartum" type="ListBox" value="" />
+  <field name="NursesNoteNewborn" type="ListBox" value="" />
+  <field name="NursesNotePrenatal" type="ListBox" value="" />
+  <field name="ValidFlag" type="CheckBox" value="X" />
+  <field name="ModifiedDate" type="DateTime" value="2013-08-14T19:34:00Z" />
+  <field name="ModifiedBy" type="Text" value="" />
+  <field name="CreatedDate" type="DateTime" value="2013-08-06T16:42:00Z" />
+  <field name="CreatedBy" type="Text" value="ADMIN" />
+  <field name="RdVersion" type="Text" value="2" />
+  <field name="EnteredBy" type="Text" value="" />
+  <field name="SignatureDisplay" type="Text" value="" />
+  <field name="BirthOrder" type="Text" value="" />
+</field-list>
+
+
+
+
+<field-list>
+  <field name="DisplayDateTime" type="DateTime" value="2013-08-21T20:04:00Z" />
+  <field name="FlowsheetDisplay" type="ListBox" value="Ante/Intrapartum*Outpatient/Triage*" />
+  <field name="Note" type="Text" value="in the future" />
+  <field name="ConsultsNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="NursesNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="ProviderNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="NotesTypes" type="TextList" value="Nurse Note" />
+  <field name="Verify" type="Text" value="frank" />
+  <field name="VerifyDateTime" type="Text" value="08/15/2013 11:18" />
+  <field name="ConsultsNotePrenatal" type="ListBox" value="" />
+  <field name="ConsultsNoteAntepartum" type="ListBox" value="" />
+  <field name="ConsultsNoteIntrapartum" type="ListBox" value="" />
+  <field name="ConsultsNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="ConsultsNoteNewborn" type="ListBox" value="" />
+  <field name="ProviderNotePrenatal" type="ListBox" value="" />
+  <field name="ProviderNoteAntepartum" type="ListBox" value="" />
+  <field name="ProviderNoteIntrapartum" type="ListBox" value="" />
+  <field name="ProviderNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="ProviderNoteNewborn" type="ListBox" value="" />
+  <field name="NursesNoteIntrapartum" type="ListBox" value="" />
+  <field name="NursesNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="NursesNoteAntepartum" type="ListBox" value="" />
+  <field name="NursesNoteNewborn" type="ListBox" value="" />
+  <field name="NursesNotePrenatal" type="ListBox" value="" />
+  <field name="ValidFlag" type="CheckBox" value="X" />
+  <field name="ModifiedDate" type="DateTime" value="2013-08-15T15:18:00Z" />
+  <field name="ModifiedBy" type="Text" value="ADMIN" />
+  <field name="CreatedDate" type="DateTime" value="2013-08-13T20:02:00Z" />
+  <field name="CreatedBy" type="Text" value="ADMIN" />
+  <field name="RdVersion" type="Text" value="3" />
+  <field name="EnteredBy" type="Text" value="ADMIN" />
+  <field name="SignatureDisplay" type="Text" value="verifyrole" />
+  <field name="BirthOrder" type="Text" value="" />
+</field-list>
+
+<field-list>
+  <field name="DisplayDateTime" type="DateTime" value="2013-08-13T20:18:00Z" />
+  <field name="FlowsheetDisplay" type="ListBox" value="Ante/Intrapartum*Outpatient/Triage*" />
+  <field name="Note" type="Text" value="this is a note w/ a signiture." />
+  <field name="ConsultsNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="NursesNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="ProviderNoteOutpatientTriage" type="ListBox" value="" />
+  <field name="NotesTypes" type="TextList" value="Nurse Note" />
+  <field name="Verify" type="Text" value="" />
+  <field name="VerifyDateTime" type="Text" value="" />
+  <field name="ConsultsNotePrenatal" type="ListBox" value="" />
+  <field name="ConsultsNoteAntepartum" type="ListBox" value="" />
+  <field name="ConsultsNoteIntrapartum" type="ListBox" value="" />
+  <field name="ConsultsNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="ConsultsNoteNewborn" type="ListBox" value="" />
+  <field name="ProviderNotePrenatal" type="ListBox" value="" />
+  <field name="ProviderNoteAntepartum" type="ListBox" value="" />
+  <field name="ProviderNoteIntrapartum" type="ListBox" value="" />
+  <field name="ProviderNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="ProviderNoteNewborn" type="ListBox" value="" />
+  <field name="NursesNoteIntrapartum" type="ListBox" value="" />
+  <field name="NursesNoteRecoveryPostpartum" type="ListBox" value="" />
+  <field name="NursesNoteAntepartum" type="ListBox" value="" />
+  <field name="NursesNoteNewborn" type="ListBox" value="" />
+  <field name="NursesNotePrenatal" type="ListBox" value="" />
+  <field name="ValidFlag" type="CheckBox" value="X" />
+  <field name="ModifiedDate" type="DateTime" value="2013-08-13T20:20:00Z" />
+  <field name="ModifiedBy" type="Text" value="ADMIN" />
+  <field name="CreatedDate" type="DateTime" value="2013-08-13T20:20:00Z" />
+  <field name="CreatedBy" type="Text" value="ADMIN" />
+  <field name="RdVersion" type="Text" value="1" />
+  <field name="EnteredBy" type="Text" value="ADMIN" />
+  <field name="SignatureDisplay" type="Text" value="ADMIN" />
+  <field name="BirthOrder" type="Text" value="" />
+</field-list>
+</data>

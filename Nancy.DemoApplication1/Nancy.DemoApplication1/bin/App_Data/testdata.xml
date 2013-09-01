@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Names xmlns:MyNs="http://www.someXmlNamespace/namespace1">
+    <Name xmlns="http://www.bbt.com/ns/LPS/1.0/LPSIntegration">
+        <FirstName>John</FirstName>
+        <LastName>Smith</LastName>
+    </Name>
+    <Name>
+        <FirstName>James</FirstName>
+        <LastName>White</LastName>
+    </Name>
+</Names>

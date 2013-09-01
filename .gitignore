@@ -11,7 +11,6 @@
 *.sdf
 *.ipch
 *.exe.config
-*.xml
 *.zip
 *.ReSharper
 _ReSharper*
