@@ -54,6 +54,21 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\testdata.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\flows02.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\myTable.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\xslflowsheets.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\xslflowsheets02.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\bootstrap-responsive.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -104,6 +119,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Helpers\MyHelpers.cs" />
+    <Compile Include="Models\MyXml.cs" />
     <Compile Include="Modules\Class1.cs" />
     <Compile Include="Modules\HelloModule.cs" />
     <Compile Include="Modules\IndexModule.cs" />

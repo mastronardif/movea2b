@@ -18,12 +18,19 @@ namespace Nancy.DemoApplication1.Modules
             {
                 //string from = parameters.from;
                 string retval = string.Empty;
-
+                string strXslt = string.Empty;
                 string strxml = makeXML_InitalContract ("Contract001", Request);
 
-                // style the _____.
+                myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/testdata.xml", ref strxml);
+                myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/myTable.xsl", ref strXslt);
 
-                return "contract001Module: ____ <br/>" + strxml;
+                // style the _____.
+                //  = StyleTheShit(xml, xslt);
+                string strResults = string.Empty;
+
+                myxslxml.MyXml.my_XslXmlOutsss(strxml, strXslt, ref strResults);
+
+                return "contract001Module: ____ <br/>" + strResults;
             };
         }
 
