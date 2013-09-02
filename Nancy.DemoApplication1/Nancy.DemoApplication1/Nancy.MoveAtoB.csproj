@@ -81,6 +81,9 @@
     <Content Include="Content\bootstrap.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Copy of index22.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\index22.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
