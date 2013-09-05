@@ -1,11 +1,14 @@
-<?xml version="1.0"?>
-<xsl:stylesheet version="1.0"
-      xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
-
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
+<xsl:output method="html" encoding="utf-8" indent="yes" />
+  
 <xsl:template match="/">
-<HTML>
-<BODY>
-                   
+<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=false;"/>
+</head>
+<BODY>                  
   <form id="contract0012" action="../contract001/contract0012" method="POST">
   <span style="color:green;"> <b>   Step II</b>  </span> <br/>
   Please verify the below and submit.
@@ -44,6 +47,8 @@
   <input type="hidden" id="IDtransaction" name="IDtransaction" value="2344ffuj393" />  
   </form>
 </BODY>
-</HTML>
+
+    </html>
+ 
 </xsl:template>
 </xsl:stylesheet>
