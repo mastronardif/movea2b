@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mailing label</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, user-scalable=false;">
+
+        <style type="text/css">
+            .form div.row {
+                margin-top: .25em;
+            }
+
+            .form span {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .form span.label {
+                font-weight: bold;
+                margin-right: .25em;
+                text-align: right;
+                width: 10em;
+            }
+        </style>
+    </head>
+
+            <form id="contract001" action="../contract001/contract001" method="POST">
+
+    <body>
+
+        <div class="form">
+            <div class="row"><span class="label">Name:</span> <span class="value"><input id="email" type="text" name="email" value="" /></span></div>
+            
+            <div class="row"><span class="label">*E-Mail:</span> <span class="value"><input id="Text1" type="text" name="email" value="" /></span></div>
+            
+            <div class="row"><span class="label">*To Address:</span> <span class="value"><textarea name="whatdetails" id="whatdetails" cols="30" rows="8">city, state, zip code only</textarea></span></div>
+            
+            
+            
+            <hr></hr>
+            
+            <div class="row"><span class="label">*From Address:</span> <span class="value"><textarea name="whatdetails" id="Textarea1" cols="30" rows="8">city, state, zip code only Not Full address!</textarea></span></div>
+            
+            <div class="row"><span class="label">*Description:</span> <span class="value"><textarea name="whatdetails" id="Textarea2" cols="30" rows="8">Weight, size, what you are moving.</textarea></span></div>
+            
+            
+        </div>
+               
+               <button id="submit" type="submit"> submit </button>
+        </form>        
+    </body>
+
+</html>

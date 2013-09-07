@@ -48,6 +48,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Nancy.Hosting.Aspnet.0.17.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
     </Reference>
+    <Reference Include="RestSharp, Version=104.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Mydlls\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -81,7 +85,7 @@
     <Content Include="Content\bootstrap.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Copy of index22.html">
+    <Content Include="Content\index221.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\index22.html">
@@ -118,6 +122,9 @@
     <Content Include="Content\scripts\bootstrap.js" />
     <Content Include="Content\scripts\highlight.min.js" />
     <Content Include="Content\scripts\jquery.min.js" />
+    <Content Include="Mydlls\RestSharp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\contract001.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -132,6 +139,7 @@
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Helpers\MyHelpers.cs" />
+    <Compile Include="Models\MyMail.cs" />
     <Compile Include="Models\MyXml.cs" />
     <Compile Include="Modules\Class1.cs" />
     <Compile Include="Modules\HelloModule.cs" />
@@ -147,7 +155,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Business\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

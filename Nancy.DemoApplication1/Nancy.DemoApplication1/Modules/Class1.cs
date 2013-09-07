@@ -64,8 +64,18 @@ namespace Nancy.DemoApplication1.Modules
                 
 
                 myxslxml.MyXml.my_XslXmlOutsss(strxml, strXslt, ref strResults);
+
+                // mail initial contract to move requester.
+                string to   = "mastronardif@gmail.com";
+                string from = "mastronardif@netcarrier.com";
+
+                // if everything passes mail to user.
+                retval += mymail.MyMail.SendByMG22(to, from, strResults);
+
                 return strResults;
                 //return "contract001Module: ____ <br/>" + strResults;
+
+                // mail to 
             };
         }
 

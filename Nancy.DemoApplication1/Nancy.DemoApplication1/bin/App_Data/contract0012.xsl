@@ -1,22 +1,31 @@
-<?xml version="1.0"?>
-<xsl:stylesheet version="1.0"
-      xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
-
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
+<xsl:output method="html" encoding="utf-8" indent="yes" />
+  
 <xsl:template match="/">
-<HTML>
-<BODY>
-                   
+<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=false;"/>
+</head>
+<BODY>                  
   <form id="contract0012" action="../contract001/contract0012" method="POST">
-  <span style="color:green;"> <b>   Step II</b>  </span> <br/>
-  Please verify the below and submit.
-  <br/><br/>
+  <span style="color:green;"> 
+  <b>   Step II</b>  </span> <br/>
 
-  Hi <xsl:value-of select="Contract001/name"/>, <br/>
-  Your request to move stuff from 
-  <xsl:value-of select="Contract001/fromzip"/> to <xsl:value-of select="Contract001/tozip"/>.
-  is almost complete.
-  <br/>
-  <br/>
+    Hi <xsl:value-of select="Contract001/name"/>, <br/>
+    Your request to move stuff from
+    <i><xsl:value-of select="Contract001/fromzip"/></i> to 
+    <span style="color:green;">
+    <xsl:value-of select="Contract001/tozip"/>. </span>
+    is almost complete.
+    <br/>
+    <br/>
+
+
+    Please verify the below and submit.
+    <br/><br/>
+
 
   <b>An email will be sent to  <xsl:value-of select="Contract001/email"/> </b>.  <br/>
   Please reply back and you request will be submitted. <br/>
@@ -44,6 +53,8 @@
   <input type="hidden" id="IDtransaction" name="IDtransaction" value="2344ffuj393" />  
   </form>
 </BODY>
-</HTML>
+
+    </html>
+ 
 </xsl:template>
 </xsl:stylesheet>
