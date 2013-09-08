@@ -59,25 +59,32 @@ namespace Nancy.DemoApplication1.Modules
 
                 if (myxslxml.MyXml.isTagValue(strxml, "Contract0012/yessubmit"))
                 {
-                    // step II a
+                    // step III a
                     // mail contract to user.
 
-                //myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/testdata.xml", ref strxml);
-                //myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract001.xsl", ref strXslt);
-                myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract00123.xsl", ref strXslt);
+                    //myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/testdata.xml", ref strxml);
+                    //myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract001.xsl", ref strXslt);
+                    myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract00123.xsl", ref strXslt);
 
-                // style the _____.
-                //  = StyleTheShit(xml, xslt);
-                
+                    // style the _____.
+                    //  = StyleTheShit(xml, xslt);
 
-                myxslxml.MyXml.my_XslXmlTransformToString(strxml, strXslt, ref strResults);
+                    myxslxml.MyXml.my_XslXmlTransformToString(strxml, strXslt, ref strResults);
 
-                // mail initial contract to move requester.
-                string to   = "mastronardif@gmail.com";
-                string from = "mastronardif@netcarrier.com";
+                    // mail initial contract to move requester.
+                    string to = "mastronardif@gmail.com";
+                    string from = "mastronardif@netcarrier.com";
 
-                // if everything passes mail to user.
-                retval += mymail.MyMail.SendByMG22(to, from, strResults);
+                    // if everything passes mail to user.
+                    retval += mymail.MyMail.SendByMG22(to, from, strResults);
+
+                    {
+                        myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract00123a.xsl", ref strXslt);
+                        myxslxml.MyXml.my_XslXmlTransformToString(strxml, strXslt, ref strResults);
+                        return strResults;
+                    }
+
+                    return "you did it.  Now go check your email and reply and wait for a shipper to contact you.";
                 }
 
                 return strResults;

@@ -75,6 +75,10 @@
     <Content Include="App_Data\Copy of contract0012.xsl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Data\contract00123a.xsl">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\testdata.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
