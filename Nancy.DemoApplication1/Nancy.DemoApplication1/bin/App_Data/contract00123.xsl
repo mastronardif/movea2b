@@ -11,7 +11,7 @@
 </head>
 <BODY>
   <span style="color:green;">
-    <b>   Step III</b>
+    <b>   Step III/I</b>
   </span> <br/>
   <p>
     Please review your request to ship A to B. <br/>
@@ -75,7 +75,7 @@
 
   <hr></hr>
   <br/>
-  You can change your request anytime to one of the below via an eForm or on-line.
+  You can change your request anytime to one of the below via an eForm or on-line. <br/>
   <b>Waiting</b> - waiting for a shipper.<br/>
   <b>Pending</b> - working w/ a shipper.<br/>
   <b>Complete</b> - stuff was delivered.<br/>
