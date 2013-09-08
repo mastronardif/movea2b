@@ -25,11 +25,13 @@ namespace Nancy.DemoApplication1.Modules
                 //myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/testdata.xml", ref strxml);
                 //myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract001.xsl", ref strXslt);
                 myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract0012.xsl", ref strXslt);
+                //myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract00123.xsl", ref strXslt);
 
-                // style the _____.
-                //  = StyleTheShit(xml, xslt);
 
-                myxslxml.MyXml.my_XslXmlOutsss(strxml, strXslt, ref strResults);
+                // Set Transaction ID
+                int iii = mybusiness.MyBusiness.addTransactionID(ref strxml, "transaction");
+
+                myxslxml.MyXml.my_XslXmlTransformToString(strxml, strXslt, ref strResults);
                 return strResults;
                 //return "contract001Module: ____ <br/>" + strResults;
             };
@@ -51,19 +53,24 @@ namespace Nancy.DemoApplication1.Modules
                 if ( myxslxml.MyXml.isTagValue(strxml, "Contract0012/cancelsubmit"))
                 {
                     myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract001.xsl", ref strXslt);
-                    myxslxml.MyXml.my_XslXmlOutsss(strxml, strXslt, ref strResults);
+                    myxslxml.MyXml.my_XslXmlTransformToString(strxml, strXslt, ref strResults);
                     return strResults;
                 }
 
+                if (myxslxml.MyXml.isTagValue(strxml, "Contract0012/yessubmit"))
+                {
+                    // step II a
+                    // mail contract to user.
+
                 //myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/testdata.xml", ref strxml);
                 //myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract001.xsl", ref strXslt);
-                myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract0012.xsl", ref strXslt);
+                myhelpers.MyHelpers.ReadFromApp_Data("~/App_Data/contract00123.xsl", ref strXslt);
 
                 // style the _____.
                 //  = StyleTheShit(xml, xslt);
                 
 
-                myxslxml.MyXml.my_XslXmlOutsss(strxml, strXslt, ref strResults);
+                myxslxml.MyXml.my_XslXmlTransformToString(strxml, strXslt, ref strResults);
 
                 // mail initial contract to move requester.
                 string to   = "mastronardif@gmail.com";
@@ -71,6 +78,7 @@ namespace Nancy.DemoApplication1.Modules
 
                 // if everything passes mail to user.
                 retval += mymail.MyMail.SendByMG22(to, from, strResults);
+                }
 
                 return strResults;
                 //return "contract001Module: ____ <br/>" + strResults;

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 using System.Xml.Xsl; 
 
@@ -12,6 +13,35 @@ namespace myxslxml
 {
     class MyXml
     {
+        static public string AddTagValue(string strXml, string tag)
+        {
+            string results = string.Empty;
+
+            //using (var sw = new StringWriter())
+            //{
+            //    using (var xw = XmlWriter.Create(sw))
+            //    {
+                    using (var xwi = XmlReader.Create(new StringReader(strXml)))
+                    {
+                        XDocument xmlDoc =XDocument.Load(xwi);
+
+                        XElement xtag = XElement.Parse(tag);
+                        xmlDoc.Root.Add(xtag);
+
+                        //XElement root = new XElement("Snippet");
+                        //root.Add(new XAttribute("name", "you"));
+                        //root.Add(new XElement("fuck", "you"));
+                        //xmlDoc.Element("Snippets").Add(root);
+                        //xmlDoc.Root.Add(root);
+
+                        results = xmlDoc.ToString();
+                    }
+             //   }
+             //}
+
+            return results;
+        }
+
         static public bool isTagValue(string xml, string xpath)
         {
             //bool retval = false;
@@ -40,7 +70,7 @@ namespace myxslxml
         }
 
 
-        static public void my_XslXmlOutsss(string strXml, string strXslt, ref string results)
+        static public void my_XslXmlTransformToString(string strXml, string strXslt, ref string results)
         {
             XslCompiledTransform myXslTransform;
             myXslTransform = new XslCompiledTransform();

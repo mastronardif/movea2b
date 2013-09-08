@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
     <head>
+          <link rel="stylesheet" type="text/css" href="../../Content/css/myletter.css" />
+
         <title>Mailing label</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <meta name="viewport" content="width=device-width, user-scalable=false;">
 
-        <style type="text/css">
+        <!--<style type="text/css">
             .form div.row {
                 margin-top: .25em;
             }
@@ -18,28 +20,30 @@
             .form span.label {
                 font-weight: bold;
                 margin-right: .25em;
-                text-align: right;
+                text-align: left;
                 width: 10em;
             }
-        </style>
+        </style>-->
     </head>
+
+
+    <body>
+         <span style="color:green;">  <b>Step I</b>  </span> <br/>
 
             <form id="contract001" action="../contract001/contract001" method="POST">
 
-    <body>
-
         <div class="form">
-            <div class="row"><span class="label">Name:</span> <span class="value"><input id="email" type="text" name="email" value="" /></span></div>
+            <div class="row"><span class="label">Name:</span> <span class="value"><input id="idname" type="text" name="name" value="" /></span></div>
             
-            <div class="row"><span class="label">*E-Mail:</span> <span class="value"><input id="Text1" type="text" name="email" value="" /></span></div>
+            <div class="row"><span class="label">*E-Mail:</span> <span class="value"><input  type="email"  id="Text1" name="email" value="" /></span></div>
             
-            <div class="row"><span class="label">*To Address:</span> <span class="value"><textarea name="whatdetails" id="whatdetails" cols="30" rows="8">city, state, zip code only</textarea></span></div>
+            <div class="row"><span class="label">*To Address:</span> <span class="value"><textarea name="toaddress" id="idtoaddress" cols="30" rows="8">city, state, zip code only</textarea></span></div>
             
             
             
             <hr></hr>
             
-            <div class="row"><span class="label">*From Address:</span> <span class="value"><textarea name="whatdetails" id="Textarea1" cols="30" rows="8">city, state, zip code only Not Full address!</textarea></span></div>
+            <div class="row"><span class="label">*From Address:</span> <span class="value"><textarea name="fromaddress" id="Textarea1" cols="30" rows="8">city, state, zip code only Not Full address!</textarea></span></div>
             
             <div class="row"><span class="label">*Description:</span> <span class="value"><textarea name="whatdetails" id="Textarea2" cols="30" rows="8">Weight, size, what you are moving.</textarea></span></div>
             
