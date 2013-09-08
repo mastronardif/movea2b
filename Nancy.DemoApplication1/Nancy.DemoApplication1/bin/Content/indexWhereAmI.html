@@ -1,5 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=false;"/>
+</head>
 <body>
 <p id="demo">Click the button to get your position:</p>
 <button onclick="getLocation()">Try It</button>
@@ -30,8 +33,8 @@
         document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
 
         {
-            var str = 'use this location <button id="submit" type="submit">Yes close enough</button>' + '&nbsp;'+
-                '<input size="30" id="loc" type="text" name="loc" value="'+latlon + '" />';
+            var str = 'Use this location <button id="submit" type="submit">Yes close enough</button>' + '&nbsp;'+
+                '<input size="30" id="loc" type="text" name="loc" value="'+latlon + '" /> <br/>';
             document.getElementById("mapholder22").innerHTML = str+ "<img src='" + img_url + "'>";
         }
     }
