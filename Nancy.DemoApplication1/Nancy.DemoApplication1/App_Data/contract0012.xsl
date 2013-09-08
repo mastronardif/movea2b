@@ -18,7 +18,7 @@
     Your request to move stuff from A to B is almost complete.
     <br/>
     
-    Please review the below and submit to continue your order.
+    Please review the information below and submit to place your order.
     <br/>
 
 
@@ -66,14 +66,7 @@
     
   An email will be sent to <b> <xsl:value-of select="Contract001/email"/> </b>.  <br/>
   Please reply from that email to complete your order. <br/>
-  
-  <br/>
-    You can  Update your job status anytime via email or on-line. Status can be the following:<br/>
-  <b>Waiting</b> - waiting for a shipper.<br/>
-  <b>Pending</b> - working w/ a shipper(s).<br/>
-  <b>Complete</b> - stuff was delivered. Job will be removed.<br/>
-  <b>Remove</b> - remove the job.<br/>
-  
+   
   <br/>
   Sincerely
   <br/>
