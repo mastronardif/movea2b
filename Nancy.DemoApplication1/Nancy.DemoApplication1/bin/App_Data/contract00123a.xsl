@@ -15,6 +15,7 @@
   </span> <br/>
   <p>
     Your request to ship A to B is in process. <br/>
+    Go check you email  <xsl:value-of select="/Contract0012/name"/> : <xsl:value-of select="/Contract0012/email"/> to complete the process.
   </p>
 
   <br/>
