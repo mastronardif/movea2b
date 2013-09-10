@@ -4,6 +4,11 @@
 * 
 * 09/07/2013
 */
+body.shipper {background-color:bisque;}
+
+  .body {
+    background: #FDFDFD; 
+    }
 
     .form div.row {
     margin-top: .25em;

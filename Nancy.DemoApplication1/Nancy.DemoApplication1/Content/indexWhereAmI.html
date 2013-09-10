@@ -2,8 +2,65 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=false;"/>
+  <link rel="stylesheet" type="text/css" href="../../Content/css/myletter.css" />
+    <title>Checking in </title> 
 </head>
-<body>
+<body class="shipper" >
+    <hr/>
+    
+                <form name= "WhereAmI" id="WhereAmI" action="../shipper/trackme" method="POST">
+
+        <div class="form">
+            <div class="row"><span class="label">Transaction:</span> <span class="value">
+                <input id="IDtransaction" type="text" name= "transaction" value="" />
+            </span></div>
+ 
+  </div>
+               
+               <button id="submit" type="submit"> Use GIS </button>  Current Location (lat, lon): 
+                    <input id="IDlatlon" type="text" name="latlon" value="" />
+                    
+                    <input id="lat" type="text" name="lat" value="" />
+                    <input id="lon" type="text" name="lon" value="" />
+                     <span id="Span3">???</span>&deg;, <span id="Span4">???</span>&deg;
+
+
+
+
+                    <p>
+        Current Location (lat, lon):<br/>
+        <span id="currentLat">???</span>&deg;, <span id="currentLon">???</span>&deg;
+      </p>
+
+    <div id="tripmeter">
+      <p>
+        Starting Location (lat, lon):<br/>
+        <span id="startLat">???</span>&deg;, <span id="startLon">???</span>&deg;
+      </p>
+      <p>
+        Current Location (lat, lon):<br/>
+        <span id="Span1">???</span>&deg;, <span id="Span2">???</span>&deg;
+      </p>
+      <p>
+        Distance from starting location:<br/>
+        <span id="distance">0</span> km
+      </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+                    manual loc [<input id="IDmanualLoc" type="text" name="manualLoc" value="" />]
+                    &nbsp;<button id="Button1" type="submit"> Track ME/The Box submit </button>
+        </form>    
+
+
 <p id="demo">Click the button to get your position:</p>
 <button onclick="getLocation()">Try It</button>
 <div id="mapholder"></div>
@@ -12,6 +69,70 @@
 <div id="Div1" style ="border:double">
     <div id="mapholder22"></div>
 </div>
+
+    <script>
+        window.onload = function () {
+            var startPos;
+
+            
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    startPos = position;
+                    document.getElementById("startLat").innerHTML = startPos.coords.latitude;
+                    document.getElementById("startLon").innerHTML = startPos.coords.longitude;
+
+                    //document.WhereAmI.IDlan.value = startPos.coords.latitude;
+                    //document.forms[0].IDlan.value = startPos.coords.latitude;
+                    //document.WhereAmI.lan.value = startPos.coords.latitude;
+                    //document.getElementById('lan').value = 'xswalue';
+
+                    document.forms[0].elements.lat.value = startPos.coords.latitude;
+                    //alert(document.getElementById('IDlan'));
+
+                }, function (error) {
+                    alert("Error occurred. Error code: " + error.code);
+                    // error.code can be:
+                    //   0: unknown error
+                    //   1: permission denied
+                    //   2: position unavailable (error response from locaton provider)
+                    //   3: timed out
+                });
+
+                navigator.geolocation.watchPosition(function (position) {
+                    document.getElementById("currentLat").innerHTML = position.coords.latitude;
+                    document.getElementById("currentLon").innerHTML = position.coords.longitude;
+                    document.getElementById("distance").innerHTML =
+                      calculateDistance(startPos.coords.latitude, startPos.coords.longitude,
+                                        position.coords.latitude, position.coords.longitude);
+
+                    //document.forms[0].elements.lon.value = position.coords.longitude + "asdf";
+                });
+            }
+
+            alert('theendi');
+            document.forms[0].elements.lon.value = "asdf";
+            //document.forms[0].elements.lon.value = document.getElementById("currentLon").innerHTML;
+        };
+
+        // Reused code - copyright Moveable Type Scripts - retrieved May 4, 2010.
+        // http://www.movable-type.co.uk/scripts/latlong.html
+        // Under Creative Commons License http://creativecommons.org/licenses/by/3.0/
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            var R = 6371; // km
+            var dLat = (lat2 - lat1).toRad();
+            var dLon = (lon2 - lon1).toRad();
+            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                    Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) *
+                    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            var d = R * c;
+            return d;
+        }
+        Number.prototype.toRad = function () {
+            return this * Math.PI / 180;
+        }
+    </script>
 
 <script>
     var x = document.getElementById("demo");

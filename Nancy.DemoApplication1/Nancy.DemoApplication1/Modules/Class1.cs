@@ -96,19 +96,37 @@ namespace Nancy.DemoApplication1.Modules
 
         private string makeXML_InitalContract (string root, Nancy.Request request)
         {
-            string retval = string.Empty;
+            return mynancy.MyNancy.makeXML_FromRequestData(root, Request);
 
-            foreach (string key in Request.Form.Keys)
-            {
-                string val = Request.Form[key];
-                string pair = string.Format("<{0}>{1}</{0}>", key, Request.Form[key]);
-                retval += pair;
-                retval += "\n";
-            }
+            //string retval = string.Empty;
 
-            retval = string.Format("<{0}>\n{1}\n </{0}>\n", root, retval);
+            //foreach (string key in Request.Form.Keys)
+            //{
+            //    string val = Request.Form[key];
+            //    string pair = string.Format("<{0}>{1}</{0}>", key, Request.Form[key]);
+            //    retval += pair;
+            //    retval += "\n";
+            //}
 
-            return retval;
+            //retval = string.Format("<{0}>\n{1}\n </{0}>\n", root, retval);
+
+            //return retval;
         }
     }
 }
+
+/*
+ * 
+ netsh http add urlacl url=http://+:55881/ user=Everyone
+ netsh http delete urlacl url=http://+:55881/
+ * 
+ * C:\Users\mastr_000\Documents\IISExpress\config\applicationhost.config
+                 <bindings>
+                    <binding protocol="http" bindingInformation=":55881:" />
+                    <binding protocol="http" bindingInformation="*:55881:localhost" />
+ 
+                </bindings>
+ * 192.168.0.6
+ * http://192.168.0.6:55881/Content/index.html
+ *  netsh http add urlacl url=http://*:55881/ user=Everyone
+ */

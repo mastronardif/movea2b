@@ -163,8 +163,10 @@
     <Compile Include="Business\MyBusiness.cs" />
     <Compile Include="Helpers\MyHelpers.cs" />
     <Compile Include="Models\MyMail.cs" />
+    <Compile Include="Models\MyNancy.cs" />
     <Compile Include="Models\MyXml.cs" />
     <Compile Include="Modules\Class1.cs" />
+    <Compile Include="Modules\ShipperModule.cs" />
     <Compile Include="Modules\HelloModule.cs" />
     <Compile Include="Modules\IndexModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
