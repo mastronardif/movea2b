@@ -105,10 +105,13 @@
                     document.getElementById("distance").innerHTML =
                       calculateDistance(startPos.coords.latitude, startPos.coords.longitude,
                                         position.coords.latitude, position.coords.longitude);
+
+                    //document.forms[0].elements.lon.value = position.coords.longitude + "asdf";
                 });
             }
 
-            //alert('theendi');
+            alert('theendi');
+            document.forms[0].elements.lon.value = "asdf";
             //document.forms[0].elements.lon.value = document.getElementById("currentLon").innerHTML;
         };
 
