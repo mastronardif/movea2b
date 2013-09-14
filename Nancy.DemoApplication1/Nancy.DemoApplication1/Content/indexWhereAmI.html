@@ -11,25 +11,24 @@
     <hr/>
                 
     <form name= "WhereAmI" id="WhereAmI" action="../shipper/trackme" method="POST">
+               <button id="Button2" type="button" onclick="TestShit();" > set city location </button> 
+               <button id="Button7" type="button" onclick="getLocation();">sho5w map</button>
 
-        <div class="form">
-            <div class="row"><span class="label">Transaction:</span> <span class="value">
-                <input id="IDtransaction" type="text" name= "transaction" value="" />
-            </span></div>
- 
-  </div>
-               <button id="Button2" type="button" onclick="TestShit();" > Test Shit </button> 
-               <button id="submit" type="submit"> Use GIS </button>  Current Location (lat, lon): 
-                    <input id="IDlatlon" type="text" name="latlon" value="" />
-                    
-                    <input id="lat" type="text" name="lat" value="" />
-                    <input id="lon" type="text" name="lon" value="" />
-                    <span id="Span3">???</span>&deg;, <span id="Span4">???</span>&deg;
-<br/>          <input type="text" id="IDgisaddress"   name= "gisaddress"  size="60" value="" />
+<p id="demo">Click the button to get your position:</p>
 
+        
+<div id="mapholder"></div>
 
+          <button id="submit" type="submit"> Use GIS </button>  
 
+    <hr/>
+<div id="Div1" style ="border:double">
+    <div id="mapholder22"></div>
+</div>
 
+        
+<br/>        Current Location (lat, lon): <span id="Span3">???</span>&deg;, <span id="Span4">???</span>&deg;
+<br/>
 
                     <p>
         Current Location (lat, lon):<br/>
@@ -40,18 +39,32 @@
       <p>
         Starting Location (lat, lon):<br/>
         <span id="startLat">???</span>&deg;, <span id="startLon">???</span>&deg;
-      </p>
-      <p>
+      <br/>
         Current Location (lat, lon):<br/>
         <span id="Span1">???</span>&deg;, <span id="Span2">???</span>&deg;
-      </p>
-      <p>
+      <br/>
         Distance from starting location:<br/>
         <span id="distance">0</span> km
       </p>
     </div>
+
                     manual loc [<input id="IDmanualLoc" type="text" name="manualLoc" value="" />]
                     &nbsp;<button id="Button1" type="submit"> Track ME/The Box submit </button>
+
+               <input id="IDlatlon" type="text" name="latlon" value="" />
+                    
+                    <input id="lat" type="text" name="lat" value="" />
+                    <input id="lon" type="text" name="lon" value="" />
+
+
+        <div class="form">
+            <div class="row"><span class="label">Transaction:</span> <span class="value">
+                <input id="IDtransaction" type="text" name= "transaction" value="" />
+            </span></div>
+        </div>       
+
+          <input type="text" id="IDgisaddress"   name= "gisaddress"  size="60" value="" />
+        <!-- footer -->
 
 <!--the hidden shits-->
   <input type="hidden" id="Hidden1" name= "transaction" value="{/Contract001/transaction}" />
@@ -59,14 +72,7 @@
 </form>    
 
 
-<p id="demo">Click the button to get your position:</p>
-<button onclick="getLocation()">show map</button>
-<div id="mapholder"></div>
 
-    <hr/>
-<div id="Div1" style ="border:double">
-    <div id="mapholder22"></div>
-</div>
 
 <script> 
     geocoder = new google.maps.Geocoder();
