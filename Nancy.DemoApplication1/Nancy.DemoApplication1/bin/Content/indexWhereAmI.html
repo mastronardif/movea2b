@@ -16,7 +16,7 @@
             </span></div>
  
   </div>
-               
+               <button id="Button2" type="button" onclick="TestShit();" > Tesh Shit </button> 
                <button id="submit" type="submit"> Use GIS </button>  Current Location (lat, lon): 
                     <input id="IDlatlon" type="text" name="latlon" value="" />
                     
@@ -70,6 +70,27 @@
     <div id="mapholder22"></div>
 </div>
 
+<script> 
+          
+    function TestShit()
+    {
+        document.forms[0].elements.lon.value = "clear the shit";
+        //alert('test shit');
+    }
+
+    function SetHiddenShits(position)
+    {
+        //document.forms[0].elements.lon.value = "clear the shit";
+        //alert('test shit');
+        document.forms[0].elements.lat.value = position.coords.latitude;
+        document.forms[0].elements.lon.value = position.coords.longitude;
+
+    }
+
+
+</script>
+          
+
     <script>
         window.onload = function () {
             var startPos;
@@ -89,6 +110,8 @@
 
                     document.forms[0].elements.lat.value = startPos.coords.latitude;
                     //alert(document.getElementById('IDlan'));
+                    //document.forms[0].elements.lon.value = "wtf ";
+                    //document.getElementById("startLon").innerHTML = startPos.coords.longitude + "what the cock stain!";
 
                 }, function (error) {
                     alert("Error occurred. Error code: " + error.code);
@@ -100,6 +123,8 @@
                 });
 
                 navigator.geolocation.watchPosition(function (position) {
+                    document.forms[0].elements.lon.value = position.coords.longitude;
+
                     document.getElementById("currentLat").innerHTML = position.coords.latitude;
                     document.getElementById("currentLon").innerHTML = position.coords.longitude;
                     document.getElementById("distance").innerHTML =
@@ -107,11 +132,12 @@
                                         position.coords.latitude, position.coords.longitude);
 
                     //document.forms[0].elements.lon.value = position.coords.longitude + "asdf";
+                    //document.forms[0].elements.lon.value = position.coords.longitude;
                 });
             }
 
-            alert('theendi');
-            document.forms[0].elements.lon.value = "asdf";
+            //alert('theendi');
+            //document.forms[0].elements.lon.value = "asdf";
             //document.forms[0].elements.lon.value = document.getElementById("currentLon").innerHTML;
         };
 
@@ -145,6 +171,10 @@
 
     function showPosition(position) {
         var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+        //        document.forms[0].elements.lat.value = position.coords.latitude;
+        SetHiddenShits(position);
+        //document.forms[0].elements.lon.value = position.coords.longitude;
 
         var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
         + latlon + "&zoom=14&size=400x300&sensor=false";

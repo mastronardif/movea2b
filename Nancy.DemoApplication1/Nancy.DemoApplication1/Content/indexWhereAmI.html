@@ -4,11 +4,13 @@
   <meta name="viewport" content="width=device-width, user-scalable=false;"/>
   <link rel="stylesheet" type="text/css" href="../../Content/css/myletter.css" />
     <title>Checking in </title> 
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 </head>
 <body class="shipper" >
     <hr/>
-    
-                <form name= "WhereAmI" id="WhereAmI" action="../shipper/trackme" method="POST">
+                
+    <form name= "WhereAmI" id="WhereAmI" action="../shipper/trackme" method="POST">
 
         <div class="form">
             <div class="row"><span class="label">Transaction:</span> <span class="value">
@@ -16,13 +18,15 @@
             </span></div>
  
   </div>
-               <button id="Button2" type="button" onclick="TestShit();" > Tesh Shit </button> 
+               <button id="Button2" type="button" onclick="TestShit();" > Test Shit </button> 
                <button id="submit" type="submit"> Use GIS </button>  Current Location (lat, lon): 
                     <input id="IDlatlon" type="text" name="latlon" value="" />
                     
                     <input id="lat" type="text" name="lat" value="" />
                     <input id="lon" type="text" name="lon" value="" />
-                     <span id="Span3">???</span>&deg;, <span id="Span4">???</span>&deg;
+                    <span id="Span3">???</span>&deg;, <span id="Span4">???</span>&deg;
+<br/>          <input type="text" id="IDgisaddress"   name= "gisaddress"  size="60" value="" />
+
 
 
 
@@ -46,23 +50,17 @@
         <span id="distance">0</span> km
       </p>
     </div>
-
-
-
-
-
-
-
-
-
-
                     manual loc [<input id="IDmanualLoc" type="text" name="manualLoc" value="" />]
                     &nbsp;<button id="Button1" type="submit"> Track ME/The Box submit </button>
-        </form>    
+
+<!--the hidden shits-->
+  <input type="hidden" id="Hidden1" name= "transaction" value="{/Contract001/transaction}" />
+  <input type="hidden" id="IDpos"         name= "pos"         value="" />
+</form>    
 
 
 <p id="demo">Click the button to get your position:</p>
-<button onclick="getLocation()">Try It</button>
+<button onclick="getLocation()">show map</button>
 <div id="mapholder"></div>
 
     <hr/>
@@ -71,10 +69,71 @@
 </div>
 
 <script> 
-          
+    geocoder = new google.maps.Geocoder();
+
+    function codeLatLng(lat, lng)
+    {
+        var info = "";
+        var latlng = new google.maps.LatLng(lat, lng);
+        geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                console.log(results)
+                if (results[1]) {
+                    //formatted address
+                    
+                    alert(results[0].formatted_address)
+                    //info = results[0].formatted_address + "df";
+                    document.forms[0].elements.gisaddress.value = results[0].formatted_address;
+
+                    //find country name
+                    for (var i = 0; i < results[0].address_components.length; i++) {
+                        for (var b = 0; b < results[0].address_components[i].types.length; b++) {
+
+                            //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
+                            if (results[0].address_components[i].types[b] == "administrative_area_level_1") {
+                                //this is the object you are looking for
+                                city = results[0].address_components[i];
+                                break;
+                            }
+                        }
+                    }
+                    //city data
+                    alert(city.short_name + " " + city.long_name)
+
+
+                } else {
+                    alert("No results found");
+                }
+            } else {
+                alert("Geocoder failed due to: " + status);
+            }
+        });
+
+        return info;
+    }
+
+
+    function myFlatten(position) 
+    {
+        var jsontext = '{' +
+                              '"position.coords.latitude":"'  + position.coords.latitude  + '"' +
+                             ',"position.coords.longitude":"' + position.coords.longitude + '"' +
+                             ',"position.timestamp":"'        + position.timestamp        + '"' +
+                             '}';
+
+        var pos = JSON.parse(jsontext);
+
+        result = JSON.stringify(pos);
+        return result;
+    }
+
+            
     function TestShit()
     {
-        document.forms[0].elements.lon.value = "clear the shit";
+        var lat = document.forms[0].elements.lat.value;
+        var lng = document.forms[0].elements.lon.value;
+        var info = codeLatLng(lat, lng);
+        //document.forms[0].elements.lon.value = "clear the shit";
         //alert('test shit');
     }
 
@@ -85,8 +144,14 @@
         document.forms[0].elements.lat.value = position.coords.latitude;
         document.forms[0].elements.lon.value = position.coords.longitude;
 
-    }
+        //console.log(position);
+        //var jsonstr = JSON.stringify(position)
+        var fuck = myFlatten(position);
 
+        var jsonstr = JSON.stringify(fuck);
+        document.forms[0].elements.pos.value = jsonstr;
+
+    }
 
 </script>
           
@@ -127,9 +192,9 @@
 
                     document.getElementById("currentLat").innerHTML = position.coords.latitude;
                     document.getElementById("currentLon").innerHTML = position.coords.longitude;
-                    document.getElementById("distance").innerHTML =
-                      calculateDistance(startPos.coords.latitude, startPos.coords.longitude,
-                                        position.coords.latitude, position.coords.longitude);
+                    //document.getElementById("distance").innerHTML =
+                    //  calculateDistance(startPos.coords.latitude, startPos.coords.longitude,
+                    //                    position.coords.latitude, position.coords.longitude);
 
                     //document.forms[0].elements.lon.value = position.coords.longitude + "asdf";
                     //document.forms[0].elements.lon.value = position.coords.longitude;
