@@ -8,48 +8,23 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 </head>
 <body class="shipper" >
-    <hr/>
-                
+
     <form name= "WhereAmI" id="WhereAmI" action="../shipper/trackme" method="POST">
-               <button id="Button2" type="button" onclick="TestShit();" > set city location </button> 
-               <button id="Button7" type="button" onclick="getLocation();">sho5w map</button>
+             <button id="Button7" type="button" onclick="getLocation();">sho5w map(1)</button>
+        <br/><button id="Button2" type="button" onclick="TestShit();" > set city location(2) </button> 
+        <br/><button id="Button1" type="submit"> Set Location(3) </button>
 
-<p id="demo">Click the button to get your position:</p>
-
-        
+<div id="Div2" style ="width: 50%;border:double">
 <div id="mapholder"></div>
-
-          <button id="submit" type="submit"> Use GIS </button>  
-
-    <hr/>
-<div id="Div1" style ="border:double">
-    <div id="mapholder22"></div>
-</div>
-
+    </div>
         
-<br/>        Current Location (lat, lon): <span id="Span3">???</span>&deg;, <span id="Span4">???</span>&deg;
-<br/>
-
+<hr/>
                     <p>
         Current Location (lat, lon):<br/>
         <span id="currentLat">???</span>&deg;, <span id="currentLon">???</span>&deg;
       </p>
-
-    <div id="tripmeter">
-      <p>
-        Starting Location (lat, lon):<br/>
-        <span id="startLat">???</span>&deg;, <span id="startLon">???</span>&deg;
-      <br/>
-        Current Location (lat, lon):<br/>
-        <span id="Span1">???</span>&deg;, <span id="Span2">???</span>&deg;
-      <br/>
-        Distance from starting location:<br/>
-        <span id="distance">0</span> km
-      </p>
-    </div>
-
                     manual loc [<input id="IDmanualLoc" type="text" name="manualLoc" value="" />]
-                    &nbsp;<button id="Button1" type="submit"> Track ME/The Box submit </button>
+                   
 
                <input id="IDlatlon" type="text" name="latlon" value="" />
                     
@@ -61,9 +36,13 @@
             <div class="row"><span class="label">Transaction:</span> <span class="value">
                 <input id="IDtransaction" type="text" name= "transaction" value="" />
             </span></div>
+
+            <div class="row"><span class="label">Address:</span> <span class="value">
+                            <input type="text" id="Text1"   name= "gisaddress"  size="60" value="" />
+            </span></div>
+
         </div>       
 
-          <input type="text" id="IDgisaddress"   name= "gisaddress"  size="60" value="" />
         <!-- footer -->
 
 <!--the hidden shits-->
@@ -87,7 +66,7 @@
                 if (results[1]) {
                     //formatted address
                     
-                    alert(results[0].formatted_address)
+                    //alert(results[0].formatted_address)
                     //info = results[0].formatted_address + "df";
                     document.forms[0].elements.gisaddress.value = results[0].formatted_address;
 
@@ -104,7 +83,7 @@
                         }
                     }
                     //city data
-                    alert(city.short_name + " " + city.long_name)
+                    //alert(city.short_name + " " + city.long_name)
 
 
                 } else {
@@ -171,19 +150,7 @@
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
                     startPos = position;
-                    document.getElementById("startLat").innerHTML = startPos.coords.latitude;
-                    document.getElementById("startLon").innerHTML = startPos.coords.longitude;
-
-                    //document.WhereAmI.IDlan.value = startPos.coords.latitude;
-                    //document.forms[0].IDlan.value = startPos.coords.latitude;
-                    //document.WhereAmI.lan.value = startPos.coords.latitude;
-                    //document.getElementById('lan').value = 'xswalue';
-
                     document.forms[0].elements.lat.value = startPos.coords.latitude;
-                    //alert(document.getElementById('IDlan'));
-                    //document.forms[0].elements.lon.value = "wtf ";
-                    //document.getElementById("startLon").innerHTML = startPos.coords.longitude + "what the cock stain!";
-
                 }, function (error) {
                     alert("Error occurred. Error code: " + error.code);
                     // error.code can be:
@@ -198,18 +165,8 @@
 
                     document.getElementById("currentLat").innerHTML = position.coords.latitude;
                     document.getElementById("currentLon").innerHTML = position.coords.longitude;
-                    //document.getElementById("distance").innerHTML =
-                    //  calculateDistance(startPos.coords.latitude, startPos.coords.longitude,
-                    //                    position.coords.latitude, position.coords.longitude);
-
-                    //document.forms[0].elements.lon.value = position.coords.longitude + "asdf";
-                    //document.forms[0].elements.lon.value = position.coords.longitude;
                 });
             }
-
-            //alert('theendi');
-            //document.forms[0].elements.lon.value = "asdf";
-            //document.forms[0].elements.lon.value = document.getElementById("currentLon").innerHTML;
         };
 
         // Reused code - copyright Moveable Type Scripts - retrieved May 4, 2010.
@@ -250,12 +207,6 @@
         var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
         + latlon + "&zoom=14&size=400x300&sensor=false";
         document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
-
-        {
-            var str = 'Use this location <button id="submit" type="submit">Yes close enough</button>' + '&nbsp;'+
-                '<input size="30" id="loc" type="text" name="loc" value="'+latlon + '" /> <br/><br/>';
-            document.getElementById("mapholder22").innerHTML = str+ "<img src='" + img_url + "'>";
-        }
     }
 
     function showError(error) {
