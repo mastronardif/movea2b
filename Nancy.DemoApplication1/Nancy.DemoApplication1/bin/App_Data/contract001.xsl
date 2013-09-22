@@ -3,7 +3,8 @@
       xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
 
 <xsl:template match="/">
-<HTML>
+<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
+  <HTML>
 <BODY>
     <xsl:apply-templates/>
 </BODY>

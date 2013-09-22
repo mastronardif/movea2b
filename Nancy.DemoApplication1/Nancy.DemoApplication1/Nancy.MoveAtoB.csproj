@@ -63,6 +63,7 @@
   <ItemGroup>
     <Content Include="App_Data\contract001.xsl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\contract0012.xsl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -100,8 +101,11 @@
     <Content Include="Content\bootstrap.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\HtmlPage1.html" />
     <Content Include="Content\indexWhereAmI.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\HtmlPage1.html" />
+    <Content Include="Content\indexWhereAmI00.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\css\myletter.css">
