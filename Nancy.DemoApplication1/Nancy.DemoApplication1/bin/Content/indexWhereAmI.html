@@ -3,18 +3,32 @@
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=false;"/>
   <link rel="stylesheet" type="text/css" href="../../Content/css/myletter.css" />
+  <link rel="stylesheet" type="text/css" href="../../Content/css/myphone.css" />
     <title>Checking in </title> 
 
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<style type="text/css">  
+/* CSS3 Buttons Without Images */
+
+</style>
+
 </head>
 <body class="shipper" >
 
     <form name= "WhereAmI" id="WhereAmI" action="../shipper/trackme" method="POST">
-             <button id="Button7" type="button" onclick="getLocation();">sho5w map(1)</button>
-        <br/><button id="Button2" type="button" onclick="TestShit();" > set city location(2) </button> 
-        <br/><button id="Button1" type="submit"> Set Location(3) </button>
+        <div style="font-size:36px;">
 
+        <br/>
+            <div class="btn red"  onclick="getLocation();">sho5w map(1)</div>
+        <hr/>
+           <div class="btn blue"  onclick="TestShit();">set city location(2)</div>
+        <hr/>
+            <div class="btn green b2" onclick="submitOnClick('WhereAmI');"> Mark Location(3)</div>
+        <hr/>
+</div>
 <div id="Div2" style ="width: 50%;border:double">
+    map will go here!
 <div id="mapholder"></div>
     </div>
         
@@ -112,7 +126,11 @@
         return result;
     }
 
-            
+    function submitOnClick(formName) {
+        //alert('sssss');
+        document.forms[formName].submit();
+    }
+
     function TestShit()
     {
         var lat = document.forms[0].elements.lat.value;
